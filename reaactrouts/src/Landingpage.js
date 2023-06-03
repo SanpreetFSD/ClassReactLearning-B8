@@ -4,6 +4,7 @@ import React, {useEffect, useState} from "react";
 
 export default function LandingPage() {
     const [counter, setCouter] = useState(0)
+    const [product, setProduct] = useState([])
     console.log(" I am rendering in landing page component");
 
     let a  = 10;
@@ -44,8 +45,27 @@ export default function LandingPage() {
             {/* in the line calling of statefunction useing arrow function*/}
             <button onClick={()=>setCouter(counter+1)}>+</button>
                {counter}
+
+
+               {
+          product.length !==0 ? product.map((element)=>(
+            <div className='card'>
+            <div>image : {element.thumbnail} <img src={element.thumbnail}/> </div>
+            <div>productTitle : {element.title}</div>
+            <div>productBrand : {element.brand}</div>
+            </div>
+          )) : <div>No PRODUCT DATA AVAILABLE</div>
+        }
+
+
+
+
         </div>
 
+
+        
+
+        
     )
 
 }
