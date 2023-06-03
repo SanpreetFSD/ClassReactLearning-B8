@@ -1,7 +1,9 @@
-import React, {useEffect} from "react";
+import axios from "axios";
+import React, {useEffect, useState} from "react";
+
 
 export default function LandingPage() {
-    const [conter, setCouter] = useState(0)
+    const [counter, setCouter] = useState(0)
     console.log(" I am rendering in landing page component");
 
     let a  = 10;
@@ -9,8 +11,20 @@ export default function LandingPage() {
     useEffect(() => {
         console.log( "I am getting printed from useEffect Body..");
 
-        let body = document.querySelector(".header");
-        console.log(body);
+        // let body = document.querySelector(".header");
+        // console.log(body);
+        const apicalling= async()=>{
+            try{
+                let response= await axios.get("https://dummyjson.com/products");
+                console.log(response.data);
+
+            }catch (error) {
+                console.log(error);
+            }
+
+        }
+        apicalling()
+
     }, [])
 
     console.log(" I am rendering in landing page component");
@@ -28,7 +42,7 @@ export default function LandingPage() {
     return (
         <div className="header">
             {/* in the line calling of statefunction useing arrow function*/}
-            <button onClick={()=>setCouter(counter+)}>+</button>
+            <button onClick={()=>setCouter(counter+1)}>+</button>
                {counter}
         </div>
 
