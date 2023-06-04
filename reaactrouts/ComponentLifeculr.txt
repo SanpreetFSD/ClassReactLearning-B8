@@ -1,6 +1,6 @@
 // component lifecylce method;
 
-What have leant till now?
+What have learnt till now?
 ==> in terms of hooks : useState and UseEffect 
 ==> states and props
 ==> react router dom and routing and linking
@@ -27,7 +27,7 @@ What have leant till now?
 
      
 
-// unmounting : when component is removed from browser realDom either way due to stoping of server or due to conditonal rendering.
+// unmounting :phase 3: when component is removed from browser realDom either way due to stoping of server or due to conditonal rendering.
    Inner phase of unmounting :(componentwillunmount)
    :UseEffect returns function which is known as a cleanup function, which in return can help you to clean any type of aftereffect which you have given to components.
    and the moment this is done , we are performing componentwillunmount inner phase action. 

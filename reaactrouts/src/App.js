@@ -29,3 +29,5 @@ export default App;
 
 // hook responsible for side effects like API calling , some kind of dom manupulaion
 
+//  Hook : create context hook to use as centerlized component (createcontext >> use context)
+
