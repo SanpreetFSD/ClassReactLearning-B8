@@ -6,13 +6,17 @@ import Signup from './Signup';
 import Login from './Login';
 import LandingPage from './Landingpage';
 
+
+import Main from './Main';
+
 function App() {
   return (
    <Routes>
     <Route path='/' element={<Signup/>}/>
     <Route path='/login' element={<Login/>}/>
 
-    <Route path='/' element={<LandingPage/>}/>
+    <Route path='/Landingpage' element={<LandingPage/>}/>
+    <Route path='/Main' element={<Main/>}/>
    </Routes>
   );
 }
